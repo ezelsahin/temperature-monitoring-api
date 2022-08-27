@@ -12,11 +12,17 @@ public class BodyTemperatureMapper {
 
     public static BodyTemperatureDTO toDTO (BodyTemperature bodyTemperature) {
         BodyTemperatureDTO bodyTemperatureDTO = new BodyTemperatureDTO();
-        bodyTemperatureDTO.setTemperature()
-        return
+        bodyTemperatureDTO.setTemperature(bodyTemperature.getTemperature());
+        bodyTemperatureDTO.setRequestDate(bodyTemperature.getRequestDate());
+        bodyTemperatureDTO.setRequestTime(bodyTemperature.getRequestTime());
+        return bodyTemperatureDTO;
     }
 
     public static BodyTemperature toEntity (BodyTemperatureDTO bodyTemperatureDTO) {
-        return
+        BodyTemperature bodyTemperature = new BodyTemperature();
+        bodyTemperature.setTemperature(bodyTemperatureDTO.getTemperature());
+        bodyTemperature.setRequestDate(bodyTemperatureDTO.getRequestDate());
+        bodyTemperature.setRequestTime(bodyTemperatureDTO.getRequestTime());
+        return bodyTemperature;
     }
 }
