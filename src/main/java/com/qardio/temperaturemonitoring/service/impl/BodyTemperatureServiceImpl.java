@@ -1,7 +1,6 @@
 package com.qardio.temperaturemonitoring.service.impl;
 
 import com.qardio.temperaturemonitoring.dto.BodyTemperatureDTO;
-import com.qardio.temperaturemonitoring.entity.BodyTemperature;
 import com.qardio.temperaturemonitoring.entity.DailyAverageTemperature;
 import com.qardio.temperaturemonitoring.entity.HourlyAverageTemperature;
 import com.qardio.temperaturemonitoring.repository.DailyAverageTemperatureRepository;
@@ -15,6 +14,8 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+
+import static com.qardio.temperaturemonitoring.dto.mapper.BodyTemperatureMapper.toEntity;
 
 /**
  * Contains CRUD operations methods
@@ -53,7 +54,7 @@ public class BodyTemperatureServiceImpl implements BodyTemperatureService {
     }
 
     /**
-     * Adds given body temperature entity to database
+     * Adds given body temperature dto entity to database as a body temperature entity
      * @param bodyTemperatureDTO A given body temperature dto entity with all parameters
      */
     @Override

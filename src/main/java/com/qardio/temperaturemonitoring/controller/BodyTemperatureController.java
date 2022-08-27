@@ -48,7 +48,8 @@ public class BodyTemperatureController {
     }
 
     /**
-     * Adds new body temperature value on "/save" url
+     * Adds new body temperature value on "/save" url and then checks if there are new temperature values on database
+     * to calculate for new average temperature values
      * @param bodyTemperatureDTO A given body temperature dto entity with all parameters
      */
     @PostMapping("/save")
