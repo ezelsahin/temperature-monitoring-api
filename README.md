@@ -1,4 +1,4 @@
-##Temperature Monitoring API
+## Temperature Monitoring API
 An API for a temperature monitoring system. The main purpose of the API is to help measuring temperature values.These 
 temperature values are average daily and hourly values of measured temperatures. And they are ready to be send to the 
 client whenever client requests them.
@@ -13,7 +13,7 @@ ready to be send.
 API is created with JAVA 11 and it adopts REST architecture. A created data.sql file contains sample values for testing
 purposes. 
 
-###Used Technologies
+### Used Technologies
 - JAVA 11
 - Spring Boot
 - REST
@@ -23,7 +23,7 @@ purposes.
 - Lombok
 - PostgreSQL
 
-###How To Run
+### How To Run
 Clone this repo into your local:
 ```
 git clone https://github.com/ezelsahin/temperature-monitoring-api.git
@@ -47,7 +47,7 @@ Run the API:
 mvn spring-boot:run
 ```
 
-###Features
+### Features
 You can find some information about endpoints below.
 
 BodyTemperatureController:
