@@ -52,7 +52,7 @@ public class BodyTemperatureController {
      * to calculate for new average temperature values
      * @param bodyTemperatureDTO A given body temperature dto entity with all parameters
      */
-    @PostMapping("/save")
+    @PutMapping("/save")
     public void saveTemperature(@RequestBody @Valid BodyTemperatureDTO bodyTemperatureDTO) {
         bodyTemperatureService.saveTemperature(bodyTemperatureDTO);
 

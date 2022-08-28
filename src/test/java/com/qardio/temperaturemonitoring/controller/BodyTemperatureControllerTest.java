@@ -32,8 +32,7 @@ import static com.qardio.temperaturemonitoring.dto.mapper.BodyTemperatureMapper.
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
 @ExtendWith(MockitoExtension.class)
 public class BodyTemperatureControllerTest {
@@ -143,7 +142,7 @@ public class BodyTemperatureControllerTest {
         String expectedTemperatureJsonStr = ow.writeValueAsString(nextTemperature);
         Mockito.doNothing().when(bodyTemperatureService).saveTemperature(toDTO(nextTemperature));
 
-        MockHttpServletResponse response = mvc.perform(post("/api/save")
+        MockHttpServletResponse response = mvc.perform(put("/api/save")
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(expectedTemperatureJsonStr))
